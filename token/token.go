@@ -35,6 +35,7 @@ const (
 
 	// Keywords
 	FUNCTION = "FUNCTION"
+	FORLOOP  = "FORLOOP"
 	LET      = "LET"
 	TRUE     = "TRUE"
 	FALSE    = "FALSE"
@@ -50,6 +51,7 @@ type Token struct {
 
 var keywords = map[string]TokenType{
 	"fn":     FUNCTION,
+	"for":    FORLOOP,
 	"let":    LET,
 	"true":   TRUE,
 	"false":  FALSE,
