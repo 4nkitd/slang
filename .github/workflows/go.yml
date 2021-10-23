@@ -27,9 +27,6 @@ jobs:
     - name: Test AST
       run: go test -v ./ast
     
-    - name: Test VM
-      run: go test -v ./vm
-    
     - name: Test Object
       run: go test -v ./object
       
