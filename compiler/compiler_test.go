@@ -437,8 +437,8 @@ func TestStringExpressions(t *testing.T) {
 			},
 		},
 		{
-			input:             `"mon" + "key"`,
-			expectedConstants: []interface{}{"mon", "key"},
+			input:             `"s" + "lang"`,
+			expectedConstants: []interface{}{"s", "lang"},
 			expectedInstructions: []code.Instructions{
 				code.Make(code.OpConstant, 0),
 				code.Make(code.OpConstant, 1),
