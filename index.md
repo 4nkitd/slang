@@ -1,37 +1,75 @@
-## Welcome to GitHub Pages
+# slang 🐕‍🦺
 
-You can use the [editor on GitHub](https://github.com/4nkitd/slang/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+goal was to learn how a interpreter works,  in other works who does these programing languages i use on daily basis works behind the seen  how a variable is assigned it's value and other things in the same realm.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## why ![](https://golang.org/lib/godoc/images/go-logo-blue.svg) ?
 
-### Markdown
+before this i mainly worked with scripting language other than java. the gofmt and binary file output are the main reasons though.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## can i use this language ?
 
-```markdown
-Syntax highlighted code block
+### NO ☠️
 
-# Header 1
-## Header 2
-### Header 3
+this barely even compare to the stepping stones of a daily driven language like go or js. it exists only so that someone can read and understand how a language works under the hood.
 
-- Bulleted
-- List
+---<!-- markdownlint-capture -->
 
-1. Numbered
-2. List
+### Main Components of a language
 
-**Bold** and _Italic_ and `Code` text
+- Token list
+- Tokenizer ( lexer )
+- Parser
+- Compiler
 
-[Link](url) and ![Image](src)
+### How to RUN 🎽
+
+```bash
+    #file is a flag , use it to run your file
+    slang -file ./sample/sample.so
+```
+OR
+
+```bash
+    slang 
+    # running slang in your terminal without any flags gives you a console to work with.
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### ⛷️ Supported Datatype  
 
-### Jekyll Themes
+- Boolean
+- Integer
+- String
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/4nkitd/slang/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### How to define a variable
+```
+let x = 42;
+```
 
-### Support or Contact
+### How to if/else 
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    Does not support elseif
+
+```
+        if (x == 1) {
+            return true;
+        } else {
+            return false;
+        }
+```
+
+### How to use a function
+```
+let fibonacci = fn (x) {
+    if (x == 0) {
+        return 0;
+    } else {
+        if (x == 1) {
+            return 1;
+        } else {
+            fibonacci(x - 1) + fibonacci(x - 2);
+        }
+    }
+};
+
+fibonacci(15);
+```
