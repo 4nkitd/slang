@@ -18,8 +18,31 @@ jobs:
       with:
         go-version: 1.17
 
+    - name: Test LEXER
+      run: go test -v ./lexer
+      
+    - name: Test PARSER
+      run: go test -v ./parser
+
+    - name: Test AST
+      run: go test -v ./ast
+    
+    - name: Test VM
+      run: go test -v ./vm
+    
+    - name: Test Object
+      run: go test -v ./object
+      
+    - name: Test Evaluator
+      run: go test -v ./evaluator
+    
+    - name: Test Code
+      run: go test -v ./code
+      
+    - name: Benchmark
+      run: |
+            cd ./benchmark
+            go run .
+      
     - name: Build
       run: go build -v ./...
-
-    - name: Test
-      run: go test -v ./...
